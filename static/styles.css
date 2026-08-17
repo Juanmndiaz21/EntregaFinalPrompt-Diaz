@@ -1,0 +1,273 @@
+/* Estilos generales de la aplicación - Terminal Hacker / Engineering Style */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+/* Aplicación general */
+.stApp {
+    background-color: #0b0c10;
+    background-image: radial-gradient(circle at 50% 50%, #12131c 0%, #08090c 100%);
+    font-family: 'JetBrains Mono', monospace;
+    color: #e2e8f0;
+}
+
+/* Limitador de ancho ultra centrado como en la imagen */
+.main .block-container {
+    max-width: 640px !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Ocultar barra superior decorativa de Streamlit para enfoque de terminal limpio */
+header[data-testid="stHeader"] {
+    background-color: transparent;
+}
+
+/* Asegura que el contenido principal quede centrado y visualmente alineado */
+.main {
+    display: block;
+}
+
+/* Hero Section / Tarjeta Superior */
+.hero-card {
+    background: #000000;
+    border: 1px solid rgba(179, 176, 20, 0.35);
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 30px rgba(179, 176, 20, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: "■ PANEL";
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 0.6rem;
+    color: #b3b014;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.eyebrow {
+    display: none; /* Ocultar para simplificar como la imagen */
+}
+
+.hero-card h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 1rem 0 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    border: none;
+}
+
+.hero-card p {
+    color: #8a99ad;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Tipografías y Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 0.9rem;
+    color: #d6ce1d;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Campos de Entrada (Textarea y Dropdowns) */
+.stTextArea textarea {
+    background-color: #12141c;
+    border: 1px solid #222530;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0.85rem;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.stTextArea textarea:focus {
+    border-color: #d6ce1d;
+    box-shadow: 0 0 10px rgba(214, 206, 29, 0.2);
+}
+
+/* Dropdowns / Selectbox / Inputs de Texto */
+div[data-baseweb="select"] {
+    background-color: #12141c;
+    border: 1px solid #222530;
+    border-radius: 4px;
+}
+
+div[data-baseweb="select"]:focus-within {
+    border-color: #b3b014;
+}
+
+input {
+    background-color: #12141c;
+    border: 1px solid #222530;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Labels de los inputs */
+label {
+    color: #8a99ad;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+/* Botón Primario (Verde Neón con texto negro, estilo plano exacto) */
+div.stButton > button:first-child {
+    background-color: #b3b014;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1.5rem;
+    width: auto;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(57, 255, 20, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+
+div.stButton > button:first-child:hover {
+    background-color: #b3b014;
+    box-shadow: 0 6px 20px rgba(57, 255, 20, 0.3);
+    transform: translateY(-1px);
+}
+
+div.stButton > button:first-child:active {
+    transform: translateY(1px);
+}
+
+/* Contenedor del Botón (alineación a la izquierda como la imagen) */
+div.stButton {
+    text-align: left;
+}
+
+/* Expanders / Acordeones */
+.stExpander {
+    background-color: #12141c;
+    border: 1px solid #222530;
+    border-radius: 4px;
+}
+
+.stExpander summary {
+    font-weight: 700;
+    color: #d6ce1d;
+    font-size: 0.85rem;
+}
+
+/* Tablas / DataFrames */
+.stDataFrame {
+    border: 1px solid #222530;
+    border-radius: 4px;
+}
+
+/* Métricas y Stats */
+[data-testid="stMetric"] {
+    background: #0d0e15;
+    border: 1px solid #222530;
+    padding: 1.2rem;
+    border-radius: 4px;
+}
+
+[data-testid="stMetricValue"] {
+    color: #d6ce1d;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #8a99ad;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Mensajes de Alerta/Estado */
+.stAlert {
+    border-radius: 4px;
+    background-color: #12141c;
+    border: 1px solid rgba(214, 206, 29, 0.25);
+    color: #e2e8f0;
+}
+
+/* Listas y viñetas */
+.stMarkdown ul, .stMarkdown ol {
+    color: #a0aec0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.stMarkdown strong {
+    color: #b3b014;
+}
+
+/* Botón Secundario de Descarga */
+.stDownloadButton > button {
+    background-color: #12141c;
+    color: #b3b014;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.stDownloadButton > button:hover {
+    background-color: rgba(57, 255, 20, 0.05);
+    border-color: #d6ce1d;
+    box-shadow: 0 0 10px rgba(214, 206, 29, 0.15);
+}
+
+/* Divisores */
+hr {
+    border-color: #222530;
+    margin: 2rem 0;
+}
+
+/* Bloque vertical de contenido */
+div[data-testid="stVerticalBlock"] {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
