@@ -33,7 +33,7 @@ Si deseas correr el proyecto en tu máquina local, sigue estos pasos:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/electrospec-ai.git
+   git clone https://github.com/Juanmndiaz21/EntregaFinalPrompt-Diaz.git
    cd electrospec-ai
    ```
 
@@ -54,37 +54,10 @@ Si deseas correr el proyecto en tu máquina local, sigue estos pasos:
    pip install -r requirements.txt
    ```
 
-4. **Configurar la API Key de Gemini:**
-   Puedes configurar tu clave mediante una variable de entorno o creando un archivo `.streamlit/secrets.toml`:
-   - **Opción A (Variable de entorno en PowerShell):**
-     ```powershell
-     $env:GEMINI_API_KEY="tu_api_key_de_gemini"
-     ```
-   - **Opción B (Archivo `secrets.toml`):**
-     Crea la carpeta `.streamlit` y dentro el archivo `secrets.toml`:
-     ```toml
-     GEMINI_API_KEY = "tu_api_key_de_gemini"
-     ```
-
 5. **Ejecutar la aplicación:**
    ```bash
    streamlit run app.py
    ```
-
----
-
-##  Despliegue en Streamlit Community Cloud
-
-Para desplegar la aplicación en la nube de forma gratuita:
-
-1. Sube tu repositorio a **GitHub**.
-2. Entra a [Streamlit Community Cloud](https://share.streamlit.io/).
-3. Haz clic en **New app** y selecciona tu repositorio, rama (`main`) y archivo principal (`app.py`).
-4. Ve a **Settings > Secrets** en el panel de Streamlit Cloud y añade tu clave:
-   ```toml
-   GEMINI_API_KEY = "tu_api_key_de_gemini"
-   ```
-5. Haz clic en **Save** y tu aplicación estará en línea.
 
 ---
 
@@ -109,6 +82,8 @@ electrospec-ai/
 
 ---
 
-##  Licencia
+##  Aplicación en Producción
 
-Este proyecto es de uso libre bajo la licencia MIT.
+Puedes probar la aplicación en línea en el siguiente enlace:
+[https://entregafinalprompt-diaz.streamlit.app/](https://entregafinalprompt-diaz.streamlit.app/)
+
