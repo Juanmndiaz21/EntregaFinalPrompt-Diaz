@@ -5,17 +5,14 @@ import pandas as pd
 
 from src.services import generar_dimensionamiento
 
-# ------------------------------------------------------------------------------
 # Configuración de la página
-# ------------------------------------------------------------------------------
 st.set_page_config(
     page_title="Asistente de Dimensionamiento Eléctrico",
     layout="wide"
 )
 
-# ------------------------------------------------------------------------------
+
 # Carga de CSS Personalizado desde archivo externo
-# ------------------------------------------------------------------------------
 def load_css(file_name="static/styles.css"):
     if os.path.exists(file_name):
         with open(file_name, "r", encoding="utf-8") as f:
@@ -26,9 +23,8 @@ def load_css(file_name="static/styles.css"):
 
 load_css("static/styles.css")
 
-# ------------------------------------------------------------------------------
+
 # Encabezado Principal
-# ------------------------------------------------------------------------------
 st.markdown(
     """
     <div class="hero-card">
@@ -53,9 +49,7 @@ with st.expander("¿Cómo funciona esta herramienta?"):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ------------------------------------------------------------------------------
 # Gestión de API Key
-# ------------------------------------------------------------------------------
 api_key = os.environ.get("GEMINI_API_KEY")
 
 if not api_key and "GEMINI_API_KEY" in st.secrets:
@@ -68,9 +62,8 @@ if not api_key:
     )
     st.stop()
 
-# ------------------------------------------------------------------------------
+
 # Entrada de Datos e Interfaz
-# ------------------------------------------------------------------------------
 st.subheader("Ingreso de Requerimientos de la Instalación")
 
 user_input = st.text_area(
@@ -87,9 +80,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# ------------------------------------------------------------------------------
 # Procesamiento
-# ------------------------------------------------------------------------------
 if st.button(
     "Calcular y Generar Recomendación Técnica",
     type="primary"
@@ -109,16 +100,14 @@ if st.button(
 
                 st.markdown("<br>", unsafe_allow_html=True)
 
-                # ------------------------------------------------------------------
+                
                 # Resumen General
-                # ------------------------------------------------------------------
                 st.subheader("Resumen Técnico de la Instalación")
 
                 st.info(data.resumen_instalacion)
 
-                # ------------------------------------------------------------------
+                
                 # Indicadores Generales
-                # ------------------------------------------------------------------
                 col1, col2, col3 = st.columns(3)
 
                 with col1:
@@ -141,9 +130,7 @@ if st.button(
 
                 st.markdown("<br>", unsafe_allow_html=True)
 
-                # ------------------------------------------------------------------
                 # Desglose de Circuitos
-                # ------------------------------------------------------------------
                 st.subheader(
                     "Desglose de Circuitos y Protecciones Recomendadas"
                 )
@@ -176,9 +163,7 @@ if st.button(
 
                 st.markdown("<br>", unsafe_allow_html=True)
 
-                # ------------------------------------------------------------------
                 # Protección y Materiales
-                # ------------------------------------------------------------------
                 col1, col2 = st.columns(2)
 
                 with col1:
@@ -199,9 +184,7 @@ if st.button(
                             "No se identificaron materiales adicionales."
                         )
 
-                # ------------------------------------------------------------------
                 # Exportación JSON
-                # ------------------------------------------------------------------
                 st.divider()
 
                 json_data = json.dumps(
