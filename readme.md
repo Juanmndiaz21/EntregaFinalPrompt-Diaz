@@ -19,3 +19,4 @@ Aplicación web desarrollada en Streamlit para asistir al personal de comercios 
 4. Instalar dependencias: `pip install -r requirements.txt`
 5. Configurar la API Key: `set GEMINI_API_KEY=tu_api_key_aqui`
 6. Ejecutar la aplicación: `streamlit run app.py`# EntregaFinalPrompt-Diaz
+# EntregaFinalPrompt-Diaz
