@@ -34,7 +34,6 @@ Si deseas correr el proyecto en tu máquina local, sigue estos pasos:
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/Juanmndiaz21/EntregaFinalPrompt-Diaz.git
-   cd EntregaFinalPrompt-Diaz.git
    ```
 
 2. **Crear y activar un entorno virtual:**
